@@ -20,6 +20,9 @@ Then edit `tt-multiplexer/proto/tt_mux.v` and change the value of `N_UM` to 16:
 +	parameter integer N_UM = 16,
 ```
 
+Important: make sure you are using efabless/openlane docker tag 2023.05.19 (or newer). 
+Previous version may introduce a bug in the `tt_mux` that will result in disconnected `um_ow` signals.
+
 ## Harden
 
 ```
