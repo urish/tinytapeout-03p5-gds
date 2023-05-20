@@ -31,7 +31,6 @@ set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 # allow use of specific sky130 cells
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 
-# put all the pins on the left
 set ::env(FP_DEF_TEMPLATE) "$::env(DESIGN_DIR)/tt_mux.def"
 
 # reduce wasted space
