@@ -14,9 +14,8 @@
   "CLOCK_PORT": "wb_clk_i",
   "CLOCK_NET": "mprj.clk",
   "FP_PDN_MACRO_HOOKS": [
-    "tt_top1/branch[0].mux_I vccd1 vssd1 vccd1 vssd1,",
     "tt_top1/ctrl_I vccd1 vssd1 vccd1 vssd1,",
-    "tt_top1/branch[1].mux_I vccd1 vssd1 vccd1 vssd1"
+    "tt_top1/.*mux_I vccd1 vssd1 vccd1 vssd1"
   ],
   "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
   "PDN_CFG": "dir::pdn_cfg.tcl",
