@@ -31,4 +31,4 @@ make tt_mux
 make user_project_wrapper
 ```
 
-Note: only `tt_ctrl` and `tt_mux` are currently implemented.
+Note: `user_project_wrapper` currently fails with LVS errors.
