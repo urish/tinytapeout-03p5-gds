@@ -14,8 +14,8 @@
   "CLOCK_PORT": "wb_clk_i",
   "CLOCK_NET": "mprj.clk",
   "FP_PDN_MACRO_HOOKS": [
-    "tt_top1/ctrl_I vccd1 vssd1 vccd1 vssd1,",
-    "tt_top1/.*mux_I vccd1 vssd1 vccd1 vssd1"
+    "tt_top1\\.ctrl_I vccd1 vssd1 vccd1 vssd1,",
+    "tt_top1\\..*mux_I vccd1 vssd1 vccd1 vssd1"
   ],
   "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
   "PDN_CFG": "dir::pdn_cfg.tcl",
@@ -40,6 +40,7 @@
   "PL_RESIZER_DESIGN_OPTIMIZATIONS": 0,
   "PL_RESIZER_TIMING_OPTIMIZATIONS": 0,
   "PL_RESIZER_BUFFER_INPUT_PORTS": 0,
+  "SYNTH_FLAT_TOP": 1,
   "FP_PDN_ENABLE_RAILS": 0,
   "DIODE_INSERTION_STRATEGY": 0,
   "RUN_FILL_INSERTION": 0,
