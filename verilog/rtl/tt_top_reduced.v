@@ -11,7 +11,7 @@
 module tt_top #(
 	parameter integer N_PADS = 38,
 	parameter integer G_X  = 16,
-	parameter integer G_Y  = 2,
+	parameter integer G_Y  = 1,
 	parameter integer N_IO = 8,
 	parameter integer N_O  = 8,
 	parameter integer N_I  = 10
