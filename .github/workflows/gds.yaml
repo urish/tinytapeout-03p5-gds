@@ -45,14 +45,23 @@ jobs:
         make
     
     - name: patch tt-multiplexer
-      run: sed -i 's/parameter integer N_IO = 8,/parameter integer N_IO = 16,/' tt-multiplexer/proto/tt_mux.v
+      run: sed -i 's/parameter integer N_UM = 8,/parameter integer N_UM = 16,/' tt-multiplexer/proto/tt_mux.v
 
     - name: generate tt_user_module.v
       run: make gen-user-module
 
     # run OpenLane to build the GDS
-    - name: make GDS
-      run: make tt_ctrl tt_mux tt_um_test user_project_wrapper
+    - name: make tt_ctrl GDS
+      run: make tt_ctrl
+
+    - name: make tt_mux GDS
+      run: make tt_mux
+
+    - name: make tt_um_test GDS
+      run: make tt_um_test
+
+    - name: make user_project_wrapper GDS
+      run: make user_project_wrapper
 
     - name: upload GDS artifact
       uses: actions/upload-artifact@v3
