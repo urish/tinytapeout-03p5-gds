@@ -11,6 +11,8 @@ export PDK_ROOT=<some dir>/pdk
 export OPENLANE_ROOT=<some dir>/openlane
 make setup
 git clone https://github.com/TinyTapeout/tt-multiplexer/
+pip install -r tt-multiplexer/proto/requirements.txt
+make gen-user-module
 ```
 
 Then edit `tt-multiplexer/proto/tt_mux.v` and change the value of `N_UM` to 16:

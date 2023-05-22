@@ -3,11 +3,13 @@
   "VERILOG_FILES": [
     "dir::../../verilog/rtl/defines.v",
     "dir::../../verilog/rtl/user_project_wrapper.v",
-    "dir::../../verilog/rtl/tt_top_reduced.v"
+    "dir::../../tt-multiplexer/proto/tt_top.v",
+    "dir::../../tt-multiplexer/proto/tt_user_module.v"
   ],
   "VERILOG_FILES_BLACKBOX": [
     "dir::../../tt-multiplexer/proto/tt_mux.v",
-    "dir::../../tt-multiplexer/proto/tt_ctrl.v"
+    "dir::../../tt-multiplexer/proto/tt_ctrl.v",
+    "dir::../../tt-multiplexer/proto/tt_um_test.v"
   ],
   "ROUTING_CORES": 8,
   "CLOCK_PERIOD": 25,
@@ -15,18 +17,21 @@
   "CLOCK_NET": "mprj.clk",
   "FP_PDN_MACRO_HOOKS": [
     "tt_top1\\.ctrl_I vccd1 vssd1 vccd1 vssd1,",
-    "tt_top1\\..*mux_I vccd1 vssd1 vccd1 vssd1"
+    "tt_top1\\..*mux_I vccd1 vssd1 vccd1 vssd1,",
+    "tt_top1\\..*tt_um_I vccd1 vssd1 vccd1 vssd1"
   ],
   "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
   "PDN_CFG": "dir::pdn_cfg.tcl",
   "MAGIC_DEF_LABELS": 0,
   "EXTRA_LEFS": [
     "dir::../../lef/tt_ctrl.lef",
-    "dir::../../lef/tt_mux.lef"
+    "dir::../../lef/tt_mux.lef",
+    "dir::../../lef/tt_um_test.lef"
   ],
   "EXTRA_GDS_FILES": [
     "dir::../../gds/tt_ctrl.gds",
-    "dir::../../gds/tt_mux.gds"
+    "dir::../../gds/tt_mux.gds",
+    "dir::../../gds/tt_um_test.gds"
   ],
   "RUN_KLAYOUT_XOR": 0,
   "RUN_KLAYOUT_DRC": 0,
