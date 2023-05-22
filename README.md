@@ -28,6 +28,7 @@ Previous version may introduce a bug in the `tt_mux` that will result in disconn
 ```
 make tt_ctrl
 make tt_mux
+make tt_um_test
 make user_project_wrapper
 ```
 
