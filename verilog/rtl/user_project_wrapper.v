@@ -81,7 +81,7 @@ module user_project_wrapper #(
     output [2:0] user_irq
 );
 
-tt_top #(.G_Y(1)) tt_top1 (
+tt_top #(.G_Y(2)) tt_top1 (
   .io_in(io_in),
   .io_out(io_out),
   .io_oeb(io_oeb),
