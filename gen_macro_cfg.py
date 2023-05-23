@@ -19,8 +19,8 @@ macrofile.write("\n")
 macrofile.write(f"# Muxes\n")
 for y in range(ROWS):
     row_y = FIRST_ROW_Y + y * ROW_SPACING
-    macrofile.write(f"tt_top1.branch\[{y*2}\].mux_I {LEFT_MUX_X}      {row_y}   N\n")
-    macrofile.write(f"tt_top1.branch\[{y*2+1}\].mux_I 1512.48 {row_y}   FN\n")
+    macrofile.write(f"tt_top1.branch\[{y*2}\].mux_I {LEFT_MUX_X}    {row_y}   N\n")
+    macrofile.write(f"tt_top1.branch\[{y*2+1}\].mux_I 1512  {row_y}   FN\n")
 macrofile.write("\n")
 
 for y in range(ROWS):
