@@ -28,13 +28,15 @@
         "dir::../../lef/tt_ctrl.lef",
         "dir::../../lef/tt_mux.lef",
         "dir::../../lef/tt_um_test.lef",
-        "dir::../../lef/tt_um_urish_simon.lef"
+        "dir::../../lef/tt_um_urish_simon.lef",
+        "dir::../../lef/tt_um_MichaelBell_hovalaag.lef"
     ],
     "EXTRA_GDS_FILES": [
         "dir::../../gds/tt_ctrl.gds",
         "dir::../../gds/tt_mux.gds",
         "dir::../../gds/tt_um_test.gds",
-        "dir::../../gds/tt_um_urish_simon.gds"
+        "dir::../../gds/tt_um_urish_simon.gds",
+        "dir::../../gds/tt_um_MichaelBell_hovalaag.gds"
     ],
     "RUN_KLAYOUT_XOR": 0,
     "RUN_KLAYOUT_DRC": 0,
