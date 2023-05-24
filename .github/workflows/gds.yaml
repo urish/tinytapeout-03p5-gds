@@ -25,14 +25,31 @@ jobs:
         repository: tinytapeout/tt-multiplexer
         path: tt-multiplexer
 
-    # need python
+    - name: checkout tt-support-tools repo
+      uses: actions/checkout@v3
+      with:
+        repository: tinytapeout/tt-support-tools
+        path: tt
+        ref: submission-tools-tt03p5
+
+    # Set Python up
     - name: setup python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
     - run: pip install -r tt-multiplexer/proto/requirements.txt
+    - run: pip install -r tt/requirements.txt
 
-    # fetch the Verilog from Wokwi API
+    # Install yosys (required for configure.py)
+    - name: install yosys
+      run: sudo apt-get install -y yosys
+   
+    - name: Fetch user project, update caravel configuration
+      run: python ./tt/configure.py --clone-all --fetch-gds --update-caravel
+      env:
+        GH_TOKEN:       ${{ secrets.GH_TOKEN }}
+        GH_USERNAME:    ${{ secrets.GH_USERNAME }}
+
     - name: Install tools
       run: make setup
 
@@ -59,6 +76,10 @@ jobs:
 
     - name: make tt_um_test GDS
       run: make tt_um_test
+
+    # Create caravel config
+    - name: Generate macro.cfg
+      run: python gen_macro_cfg.py
 
     - name: make user_project_wrapper GDS
       run: make user_project_wrapper
