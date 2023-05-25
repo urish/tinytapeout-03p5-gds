@@ -30,7 +30,7 @@ jobs:
       with:
         repository: tinytapeout/tt-support-tools
         path: tt
-        ref: submission-tools-tt03p5
+        ref: tt03p5
 
     # Set Python up
     - name: setup python
