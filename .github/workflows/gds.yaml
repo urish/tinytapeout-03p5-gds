@@ -89,3 +89,13 @@ jobs:
       with:
           name: GDS
           path: openlane/user_project_wrapper/runs/user_project_wrapper/results/final/*
+
+    - name: upload macros artifact
+      uses: actions/upload-artifact@v3
+      with:
+          name: macros
+          path: |
+            gds/*
+            lef/*
+            spef/*
+            verilog/gl/*
