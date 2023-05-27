@@ -30,10 +30,10 @@ Previous version may introduce a bug in the `tt_mux` that will result in disconn
 Set `GH_USERNAME` and `GH_TOKEN` environment variables with your GitHub username and a personal access token, respectively.
 To generate your GH_TOKEN go to https://github.com/settings/tokens/new . Set the checkboxes for repo and workflow.
 
-Then clone the submission-tools-tt03p5 of the tt-support-tools repo and install the required packages:
+Then clone the tt03p5 branch from the tt-support-tools repo and install the required packages:
 
 ```
-git clone -b submission-tools-tt03p5 https://github.com/tinytapeout/tt-support-tools tt 
+git clone -b tt03p5 https://github.com/tinytapeout/tt-support-tools tt 
 ```
 
 Finally, run the following commands to fetch the user projects and generate the configuration for the user_project_wrapper:
