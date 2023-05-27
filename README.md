@@ -15,11 +15,11 @@ pip install -r tt-multiplexer/proto/requirements.txt
 make gen-user-module
 ```
 
-Then edit `tt-multiplexer/proto/tt_mux.v` and change the value of `N_UM` to 16:
+Then apply a patch to `tt-multiplexer/proto/tt_mux.v`, which sets the number of columns per mux to 8,
+and works around an issue with `yosys` inserting buffers on the `spine_ow` signals, after the tristate buffers output.
 
-```diff
--	parameter integer N_UM = 8,
-+	parameter integer N_UM = 16,
+```
+git apply --directory=tt-multiplexer tt_mux.patch
 ```
 
 Important: make sure you are using efabless/openlane docker tag 2023.05.19 (or newer). 

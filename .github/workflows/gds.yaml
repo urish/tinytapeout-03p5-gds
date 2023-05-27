@@ -62,7 +62,7 @@ jobs:
         make
     
     - name: patch tt-multiplexer
-      run: sed -i 's/parameter integer N_UM = 8,/parameter integer N_UM = 16,/' tt-multiplexer/proto/tt_mux.v
+      run: git apply --directory=tt-multiplexer tt_mux.patch
 
     - name: generate tt_user_module.v
       run: make gen-user-module
