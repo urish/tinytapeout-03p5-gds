@@ -40,9 +40,12 @@ jobs:
     - run: pip install -r tt-multiplexer/proto/requirements.txt
     - run: pip install -r tt/requirements.txt
 
-    # Install yosys (required for configure.py)
-    - name: install yosys
-      run: sudo apt-get install -y yosys
+    # Install yosys (required for tt/configure.py)
+    - name: install oss-cad-suite
+      uses: YosysHQ/setup-oss-cad-suite@v2
+      with:
+          version: '2023-05-27'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
    
     - name: Fetch user project, update caravel configuration
       run: python ./tt/configure.py --clone-all --fetch-gds --update-caravel
