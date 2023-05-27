@@ -32,7 +32,8 @@
         "dir::../../lef/tt_um_MichaelBell_hovalaag.lef",
         "dir::../../lef/tt_um_as1802.lef",
         "dir::../../lef/tt_um_urish_dffram.lef",
-        "dir::../../lef/tt_um_cam.lef"
+        "dir::../../lef/tt_um_cam.lef",
+        "dir::../../lef/tt_um_TrainLED2_top.lef"
     ],
     "EXTRA_GDS_FILES": [
         "dir::../../gds/tt_ctrl.gds",
@@ -42,7 +43,8 @@
         "dir::../../gds/tt_um_MichaelBell_hovalaag.gds",
         "dir::../../gds/tt_um_as1802.gds",
         "dir::../../gds/tt_um_urish_dffram.gds",
-        "dir::../../gds/tt_um_cam.gds"
+        "dir::../../gds/tt_um_cam.gds",
+        "dir::../../gds/tt_um_TrainLED2_top.gds"
     ],
     "RUN_KLAYOUT_XOR": 0,
     "RUN_KLAYOUT_DRC": 0,
