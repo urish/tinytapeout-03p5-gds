@@ -9,7 +9,11 @@ This is a prototype Tiny Tapeout using the new Mux.
 ```
 export PDK_ROOT=<some dir>/pdk
 export OPENLANE_ROOT=<some dir>/openlane
+export OPENLANE_TAG=2023.02.14
+export OPENLANE_IMAGE_NAME=efabless/openlane:2023.05.19
+export PDK=sky130A
 make setup
+
 git clone https://github.com/TinyTapeout/tt-multiplexer/
 pip install -r tt-multiplexer/proto/requirements.txt
 make gen-user-module
