@@ -25,8 +25,7 @@ set ::env(VERILOG_FILES) "\
 set ::env(RUN_KLAYOUT_XOR) 0
 set ::env(RUN_KLAYOUT_DRC) 0
 
-# don't put clock buffers on the inputs & outputs
-set ::env(PL_RESIZER_BUFFER_INPUT_PORTS) 0
+# don't put clock buffers on the outputs
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 
 # allow use of specific sky130 cells
