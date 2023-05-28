@@ -30,4 +30,8 @@
   url: https://github.com/TinyTapeout/tt03p5-vga-clock
   status: active
   fill: false
+8:
+  url: https://github.com/kiwih/tt03p5-verilog-qtcoreA1
+  status: active
+  fill: false
 
