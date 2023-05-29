@@ -108,5 +108,6 @@ jobs:
     # run GL test
     - name: GL simulation
       run: |
+        git checkout verilog/includes/ # check out the includes before running GL as configure.py --update-caravel overwrites them
         cd verilog/dv/mux
         make clean test_mux_gl
