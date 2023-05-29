@@ -34,7 +34,7 @@ jobs:
         path: tt
 
     # install the tt mux
-    - name: checkout tt tools repo
+    - name: checkout tt mux repo
       uses: actions/checkout@v3
       with:
         repository: tinytapeout/tt-multiplexer
