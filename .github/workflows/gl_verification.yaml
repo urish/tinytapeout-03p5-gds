@@ -4,6 +4,8 @@ on: [ push, workflow_dispatch, pull_request ]
 jobs:
   gl_verification:
     env:
+        OPENLANE_TAG:           2023.02.14
+        OPENLANE_IMAGE_NAME:    efabless/openlane:2023.05.19
         OPENLANE_ROOT:      /home/runner/openlane
         PDK_ROOT:           /home/runner/pdk
         PDK:                sky130A
@@ -48,6 +50,14 @@ jobs:
     - name: pdk & openlane & precheck
       run: |
         make setup
+
+    # build OpenLane
+#    - name: openlane repo
+#      run: |
+#        rm -rf $OPENLANE_ROOT
+#        git clone --depth=1 --branch $OPENLANE_TAG https://github.com/The-OpenROAD-Project/OpenLane.git $OPENLANE_ROOT
+#        cd $OPENLANE_ROOT
+#        make
 
     # uncompress any gds commited to the repo
     - name: uncompress gds
