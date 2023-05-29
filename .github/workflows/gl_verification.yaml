@@ -79,15 +79,15 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           version: '2022-09-03' # pin the version, latest one fails to work with caravel
 
-    # fetch the test repos
-    #- name: fetch all
-    #  run: python ./tt/configure.py --test --clone-all --fetch-gds --debug
+    # fetch the repos, they're ignored for the test, but needed for the static config.json to work
+    - name: Fetch user project, update caravel configuration
+      run: python ./tt/configure.py --clone-all --fetch-gds --update-caravel
 
     # install test projects
     #- name: configure
     #  run: python ./tt/configure.py --test --update-caravel
 
-    # overwrite the user modules with the test modules
+    # overwrite the user modules with the test modules. config.json still works as the test module is included
     - name: module config
       run: |
         cp tt_test_module.yaml tt_user_module.yaml
