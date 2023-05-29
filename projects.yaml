@@ -1,5 +1,5 @@
 0:
-  url: https://github.com/urish/tt03p5-simon-game
+  url: https://github.com/TinyTapeout/tt03p5-test
   status: active
   fill: false
 1:
@@ -39,9 +39,9 @@
   status: active
   fill: false
 10:
-  url: https://github.com/TinyTapeout/tt03p5-test
+  url: https://github.com/urish/tt03p5-simon-game
   status: active
-  fill: true
+  fill: false
 11:
   url: https://github.com/TinyTapeout/tt03p5-test
   status: active
@@ -51,10 +51,6 @@
   status: active
   fill: true
 13:
-  url: https://github.com/TinyTapeout/tt03p5-test
-  status: active
-  fill: true
-10:
   url: https://github.com/TinyTapeout/tt03p5-test
   status: active
   fill: true
