@@ -77,16 +77,23 @@ jobs:
     #- name: configure
     #  run: python ./tt/configure.py --test --update-caravel
 
-    # macro config, first overwrite the user modules with the test modules
-    - name: macro config
+    # overwrite the user modules with the test modules
+    - name: module config
       run: |
         cp tt_test_module.yaml tt_user_module.yaml
         make gen-user-module
-        python gen_macro_cfg.py
 
-    # need the user project wrapper gatelevel netlist
+    # need the modules lef & gds
+    - name: ttmux GDS
+      run: make tt_ctrl tt_mux tt_um_test 
+
+    # macro config, depends on the ttmux build artifacts being present
+    - name: macro config
+      run: python gen_macro_cfg.py
+
+    # user project wrapper
     - name: user project wrapper GDS
-      run: make tt_ctrl tt_mux tt_um_test user_project_wrapper
+      run: make user_project_wrapper
 
     # run GL test
     - name: GL simulation
