@@ -33,6 +33,16 @@ jobs:
         ref: tt03p5
         path: tt
 
+    # install the tt mux
+    - name: checkout tt tools repo
+      uses: actions/checkout@v3
+      with:
+        repository: tinytapeout/tt-multiplexer
+
+    # tristate & num modules patch
+    - name: patch
+      run: git apply --directory=tt-multiplexer tt_mux.patch
+
     # build pdk - have to move this back above to get caravel makefile
     - name: pdk & openlane & precheck
       run: |
@@ -49,9 +59,9 @@ jobs:
       with:
         python-version: '3.10'
         cache: 'pip'
-    - run: pip install -r tt/requirements.txt
+    - run: pip install -r tt/requirements.txt -r tt-multiplexer/proto/requirements.txt
 
-    # install oss fpga tools for yosys to sanity check module ports
+    # install oss fpga tools to get iverilog etc
     - name: install oss-cad-suite
       uses: YosysHQ/setup-oss-cad-suite@v2
       with:
@@ -70,6 +80,7 @@ jobs:
     - name: macro config
       run: |
         cp tt_test_module.yaml tt_user_module.yaml
+        make gen-user-module
         python gen_macro_cfg.py
 
     # need the user project wrapper gatelevel netlist
@@ -79,5 +90,5 @@ jobs:
     # run GL test
     - name: GL simulation
       run: |
-        cd verilog/dv/test_mux
+        cd verilog/dv/mux
         make clean test_mux_gl
