@@ -51,14 +51,6 @@ jobs:
       run: |
         make setup
 
-    # build OpenLane
-#    - name: openlane repo
-#      run: |
-#        rm -rf $OPENLANE_ROOT
-#        git clone --depth=1 --branch $OPENLANE_TAG https://github.com/The-OpenROAD-Project/OpenLane.git $OPENLANE_ROOT
-#        cd $OPENLANE_ROOT
-#        make
-
     # uncompress any gds commited to the repo
     - name: uncompress gds
       run: | 
