@@ -83,7 +83,7 @@ jobs:
 
     # need the modules lef & gds
     - name: ttmux GDS
-      run: make tt_ctrl tt_mux tt_um_test 
+      run: make tt_ctrl tt_mux 
 
     # macro config, depends on the ttmux build artifacts being present
     - name: macro config

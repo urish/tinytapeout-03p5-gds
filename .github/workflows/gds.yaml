@@ -77,9 +77,6 @@ jobs:
     - name: make tt_mux GDS
       run: make tt_mux
 
-    - name: make tt_um_test GDS
-      run: make tt_um_test
-
     # Create caravel config
     - name: Generate macro.cfg
       run: python gen_macro_cfg.py
