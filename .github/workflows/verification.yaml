@@ -67,7 +67,7 @@ jobs:
     - run: | 
         yosys --version
         iverilog -V
-        pip install -r tt/requirements.txt
+        pip install -r tt/requirements.txt -r tt-multiplexer/proto/requirements.txt
 
     # fetch the repos - test mode
     - name: fetch all
