@@ -85,7 +85,7 @@ tt_top #(.G_Y(2)) tt_top1 (
   .io_in(io_in),
   .io_out(io_out),
   .io_oeb(io_oeb),
-  .user_clock2(user_clock2),
+  .user_clock2(user_clock2)
 );
 
 endmodule	// user_project_wrapper
