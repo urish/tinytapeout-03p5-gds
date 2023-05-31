@@ -43,9 +43,9 @@
   status: active
   fill: false
 11:
-  url: https://github.com/TinyTapeout/tt03p5-test
+  url: https://github.com/TomKeddie/tinytapeout-2023-2a
   status: active
-  fill: true
+  fill: false
 12:
   url: https://github.com/TinyTapeout/tt03p5-test
   status: active
