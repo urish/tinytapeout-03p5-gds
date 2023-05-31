@@ -1,8 +1,11 @@
-[![gl_verification](https://github.com/TinyTapeout/tinytapeout-03p5/actions/workflows/gl_verification.yaml/badge.svg)](https://github.com/TinyTapeout/tinytapeout-03p5/actions/workflows/gl_verification.yaml)
-[![verification](https://github.com/TinyTapeout/tinytapeout-03p5/actions/workflows/verification.yaml/badge.svg)](https://github.com/TinyTapeout/tinytapeout-03p5/actions/workflows/verification.yaml)
-[![gds](https://github.com/TinyTapeout/tinytapeout-03p5/actions/workflows/gds.yaml/badge.svg)](https://github.com/TinyTapeout/tinytapeout-03p5/actions/workflows/gds.yaml)
+[![tinytapeout](https://github.com/tinytapeout/tinytapeout-03/actions/workflows/gds.yaml/badge.svg)](https://github.com/tinytapeout/tinytapeout-03/actions/workflows/gds.yaml)
+[![verification](https://github.com/tinytapeout/tinytapeout-03/actions/workflows/verification.yaml/badge.svg)](https://github.com/tinytapeout/tinytapeout-03/actions/workflows/verification.yaml)
+[![tt_datasheet](https://github.com/tinytapeout/tinytapeout-03/actions/workflows/tt_datasheet.yaml/badge.svg)](https://github.com/tinytapeout/tinytapeout-03/actions/workflows/tt_datasheet.yaml)
+[![gl_verification](https://github.com/TinyTapeout/tinytapeout-03/actions/workflows/gl_verification.yaml/badge.svg)](https://github.com/TinyTapeout/tinytapeout-03/actions/workflows/gl_verification.yaml)
+[![formal](https://github.com/TinyTapeout/tinytapeout-03/actions/workflows/formal.yaml/badge.svg)](https://github.com/TinyTapeout/tinytapeout-03/actions/workflows/formal.yaml)
+[![sta](https://github.com/TinyTapeout/tinytapeout-03/actions/workflows/sta.yaml/badge.svg)](https://github.com/TinyTapeout/tinytapeout-03/actions/workflows/sta.yaml)
 
-# Tiny Tapeout 03p5
+# TinyTapeout 03.5
 
 * Visit https://tinytapeout.com for more information on the project and how to get involved.
 * Read [INFO](INFO.md) for how the project is built and technical project notes.
@@ -12,18 +15,7 @@
 
 [PDF Download](datasheet.pdf).
 
-```
-export PDK_ROOT=<some dir>/pdk
-export OPENLANE_ROOT=<some dir>/openlane
-export OPENLANE_TAG=2023.02.14
-export OPENLANE_IMAGE_NAME=efabless/openlane:2023.05.19
-export PDK=sky130A
-make setup
-
-git clone https://github.com/TinyTapeout/tt-multiplexer/
-pip install -r tt-multiplexer/proto/requirements.txt
-make gen-user-module
-```
+For the most recent automatic build, click the tt_datasheet badge above, then download the PDF artifact.
 
 # GDS layout of all projects
 
@@ -31,32 +23,16 @@ make gen-user-module
 
 # Project Index
 
-## Fetch projects
-
-Set `GH_USERNAME` and `GH_TOKEN` environment variables with your GitHub username and a personal access token, respectively.
-To generate your GH_TOKEN go to https://github.com/settings/tokens/new . Set the checkboxes for repo and workflow.
-
-Then clone the tt03p5 branch from the tt-support-tools repo and install the required packages:
-
-```
-git clone -b tt03p5 https://github.com/tinytapeout/tt-support-tools tt 
-```
-
-Finally, run the following commands to fetch the user projects and generate the configuration for the user_project_wrapper:
-
-```
-pip install -r tt/requirements.txt
-python tt/configure.py --clone-all --fetch-gds --update-caravel
-```
-
-## Harden
-
-```
-make tt_ctrl
-make tt_mux
-make tt_um_test
-python gen_macro_cfg.py
-make user_project_wrapper
-```
-
-Note: `user_project_wrapper` currently has LVS errors. It should have exactly 51 errors - otherwise, there's something wrong (probably with the PDN not connecting to macros).
+| Index | Author | Title | Type | Git Repo |
+| ----- | ------ | ------| -----| ---------|
+| 0 | Sylvain Munaut | TinyTapeout 3p5 Test | HDL | https://github.com/TinyTapeout/tt03p5-test |
+| 1 | Mike Bell | Hovalaag CPU | HDL | https://github.com/MichaelBell/tt03-hovalaag |
+| 2 | Tholin | AS1802 | HDL | https://github.com/89Mods/tt3p5-as1802 |
+| 3 | Uri Shaked | DFFRAM (128 bytes) | HDL | https://github.com/TinyTapeout/tt03p5-dffram |
+| 4 | Ioannis-Rafail Tzonevrakis | Simple verilog content-addressable memory/associative array | HDL | https://github.com/irtzonevrakis/tt03p5-content-addressable-memory |
+| 5 | cpldcpu | TrainLED2 - RGB-LED driver with 8 bit PWM engine | HDL | https://github.com/cpldcpu/tt03p5-TrainLED2 |
+| 6 | William Moyes | M0: A 16-bit SUBLEQ Microprocessor | HDL | https://github.com/moyesw/TT03p5-M0 |
+| 7 | Matt Venn | VGA clock | HDL | https://github.com/TinyTapeout/tt03p5-vga-clock |
+| 8 | Hammond Pearce | TT3p5-QTCore-A1 | HDL | https://github.com/kiwih/tt03p5-verilog-qtcoreA1 |
+| 9 | Steven bos | 4-trit balanced ternary program counter and convertor | HDL | https://github.com/aiunderstand/tt03p5-4-trit-balanced-ternary-counter-bt_signb_bt-radix-convertor |
+| 10 | Uri Shaked | Simon Says | HDL | https://github.com/urish/tt03p5-simon-game |
