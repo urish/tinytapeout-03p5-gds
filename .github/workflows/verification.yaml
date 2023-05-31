@@ -40,10 +40,10 @@ jobs:
         repository: tinytapeout/tt-multiplexer
         path: tt-multiplexer
 
-    # get caravel makefile and management core for sims
-    - name: caravel
+    # get caravel makefile and management core for sims. need PDK for some of the verification
+    - name: caravel & PDK
       run: |
-        make install install_mcw
+        make setup
 
     # install riscv gcc
     - name: riscv gcc
