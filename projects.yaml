@@ -1,5 +1,5 @@
 0:
-  url: https://github.com/urish/tt03p5-simon-game
+  url: https://github.com/TinyTapeout/tt03p5-test
   status: active
   fill: false
 1:
@@ -26,3 +26,103 @@
   url: https://github.com/moyesw/TT03p5-M0
   status: active
   fill: false
+7:
+  url: https://github.com/TinyTapeout/tt03p5-vga-clock
+  status: active
+  fill: false
+8:
+  url: https://github.com/kiwih/tt03p5-verilog-qtcoreA1
+  status: active
+  fill: false
+9:
+  url: https://github.com/aiunderstand/tt03p5-4-trit-balanced-ternary-counter-bt_signb_bt-radix-convertor
+  status: active
+  fill: false
+10:
+  url: https://github.com/urish/tt03p5-simon-game
+  status: active
+  fill: false
+11:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+12:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+13:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+14:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+15:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+16:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+17:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+18:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+19:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+20:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+21:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+22:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+23:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+24:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+25:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+26:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+27:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+28:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+29:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+30:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true
+31:
+  url: https://github.com/TinyTapeout/tt03p5-test
+  status: active
+  fill: true

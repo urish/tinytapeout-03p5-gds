@@ -1,0 +1,88 @@
+name: verification
+# either manually started, or on a schedule
+on: [ push, workflow_dispatch, pull_request ]
+jobs:
+  verification:
+    env:
+        OPENLANE_ROOT:      /home/runner/openlane
+        PDK_ROOT:           /home/runner/pdk
+        PDK:                sky130A
+        GH_TOKEN:           ${{ secrets.GH_TOKEN }}
+        GH_USERNAME:        ${{ secrets.GH_USERNAME }}
+        DESIGNS:            /home/runner/work/tinytapeout-03p5/tinytapeout-03p5
+        TARGET_PATH:        /home/runner/work/tinytapeout-03p5/tinytapeout-03p5
+        MGMT_AREA_ROOT:     /home/runner/work/tinytapeout-03p5/tinytapeout-03p5/mgmt_core_wrapper
+        MCW_ROOT:           /home/runner/work/tinytapeout-03p5/tinytapeout-03p5/mgmt_core_wrapper
+        CARAVEL_ROOT:       /home/runner/work/tinytapeout-03p5/tinytapeout-03p5/caravel
+        CORE_VERILOG_PATH:  /home/runner/work/tinytapeout-03p5/tinytapeout-03p5/mgmt_core_wrapper/verilog
+        GCC_PATH:           /home/runner/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/
+        GCC_PREFIX:         riscv64-unknown-elf
+
+    # ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    # need the repo checked out
+    - name: checkout repo
+      uses: actions/checkout@v3
+
+    # install the tt tools
+    - name: checkout tt tools repo
+      uses: actions/checkout@v3
+      with:
+        repository: tinytapeout/tt-support-tools
+        ref: tt03p5
+        path: tt
+
+    # install the tt mux
+    - name: checkout tt mux repo
+      uses: actions/checkout@v3
+      with:
+        repository: tinytapeout/tt-multiplexer
+        path: tt-multiplexer
+
+    # get caravel makefile and management core for sims
+    - name: caravel
+      run: |
+        make install install_mcw
+
+    # install riscv gcc
+    - name: riscv gcc
+      run: |
+        cd $HOME
+        wget https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz
+        tar -xzf riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz
+
+    # need python
+    - name: setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+    - run: pip install -r tt/requirements.txt -r tt-multiplexer/proto/requirements.txt
+
+    # install oss fpga tools for cocotb and iverilog
+    - name: install oss-cad-suite
+      uses: YosysHQ/setup-oss-cad-suite@v2
+      with:
+          version: '2022-09-03' # pin the version, latest one fails to work with caravel
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+    # fetch the repos - test mode
+    - name: fetch all
+      run: python ./tt/configure.py --clone-all --fetch-gds --debug --test
+
+    # install projects
+    - name: configure for test
+      run: python ./tt/configure.py --update-caravel --test
+
+    # generate the tt mux verilog that instantiates all the modules - use the test version
+    - name: module config
+      run: |
+        cp tt_test_module.yaml tt_user_module.yaml
+        make gen-user-module
+
+    # run first set of tests
+    - name: basic simulations
+      run: |
+        cd verilog/dv/mux
+        make clean test_mux
