@@ -57,9 +57,15 @@ jobs:
       uses: YosysHQ/setup-oss-cad-suite@v2
       with:
           version: '2022-09-03' # pin the version, latest one fails to work with caravel
-          python-override: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
-    - run: pip install -r tt/requirements.txt -r tt-multiplexer/proto/requirements.txt
+
+    # Set Python up
+    - name: setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - run: pip install -r tt-multiplexer/proto/requirements.txt
+    - run: pip install -r tt/requirements.txt
 
     # fetch the repos - test mode
     - name: fetch all
