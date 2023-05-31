@@ -33,23 +33,26 @@ async def test_mux(dut):
     clock = Clock(dut.clk, 100, units="ns") # 10 MHz
     cocotb.start_soon(clock.start())
 
+    dut.uio_in.value = 0
+    dut.ui_in.value = 0
     # select test design
     dut.reset_n.value = 0
     await enable_design(dut, 0, 0)
 
     # with bit 0 of ui_in set to 0, module will copy inputs to outputs
-    dut.ui_in.value = 0b11111110
+    dut.ui_in.value = 0b0
     await ClockCycles(dut.clk, 5) # wait until the wait state config is read
     dut.reset_n.value = 1
 
-    for i in range(128):
-        dut.ui_in.value = i << 1
-        assert dut.uo_out.value == dut.ui_in.value
-        await ClockCycles(dut.clk, 1) # wait until the wait state config is read
+    dut._log.info("test loopback")
+    for i in range(256):
+        dut.uio_in.value = i
+        await ClockCycles(dut.clk, 1)
+        assert dut.uo_out.value == i
 
 
     # with bit 0 of ui_in set to 1, module will enable bidirectional outputs and put a counter on both output and bidirectional output
-    dut.ui_in.value = 0b11111111
+    dut.ui_in.value = 0b1
     
     # reset it
     dut.reset_n.value = 0
@@ -57,6 +60,7 @@ async def test_mux(dut):
     dut.reset_n.value = 1
     await ClockCycles(dut.clk, 2) # sync
      
+    dut._log.info("test counter")
     for i in range(256):
         assert dut.uo_out.value == dut.uio_out.value
         assert dut.uo_out.value == i
