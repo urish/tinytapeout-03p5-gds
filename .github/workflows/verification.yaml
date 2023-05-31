@@ -65,6 +65,7 @@ jobs:
       uses: YosysHQ/setup-oss-cad-suite@v2
       with:
           version: '2022-09-03' # pin the version, latest one fails to work with caravel
+          python-override: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
     # fetch the repos - test mode
