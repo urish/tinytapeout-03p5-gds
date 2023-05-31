@@ -86,3 +86,9 @@ jobs:
       run: |
         cd verilog/dv/mux
         make clean test_mux
+
+    # run caravel level test
+    - name: caravel simulations
+      run: |
+        cd verilog/dv/mux_ext
+        make clean coco_test
