@@ -9,7 +9,6 @@
     "VERILOG_FILES_BLACKBOX": [
         "dir::../../tt-multiplexer/proto/tt_mux.v",
         "dir::../../tt-multiplexer/proto/tt_ctrl.v",
-        "dir::../../tt-multiplexer/proto/tt_um_test.v",
         "dir::../../verilog/blackbox_project_includes.v"
     ],
     "ROUTING_CORES": 8,
@@ -28,7 +27,6 @@
         "dir::../../lef/tt_ctrl.lef",
         "dir::../../lef/tt_mux.lef",
         "dir::../../lef/tt_um_test.lef",
-        "dir::../../lef/tt_um_urish_simon.lef",
         "dir::../../lef/tt_um_MichaelBell_hovalaag.lef",
         "dir::../../lef/tt_um_as1802.lef",
         "dir::../../lef/tt_um_urish_dffram.lef",
@@ -36,13 +34,14 @@
         "dir::../../lef/tt_um_TrainLED2_top.lef",
         "dir::../../lef/tt_um_moyes0_top_module.lef",
         "dir::../../lef/tt_um_vga_clock.lef",
-        "dir::../../lef/tt_um_kiwih_tt_top.lef"
+        "dir::../../lef/tt_um_kiwih_tt_top.lef",
+        "dir::../../lef/tt_um_ternaryPC_radixconvert.lef",
+        "dir::../../lef/tt_um_urish_simon.lef"
     ],
     "EXTRA_GDS_FILES": [
         "dir::../../gds/tt_ctrl.gds",
         "dir::../../gds/tt_mux.gds",
         "dir::../../gds/tt_um_test.gds",
-        "dir::../../gds/tt_um_urish_simon.gds",
         "dir::../../gds/tt_um_MichaelBell_hovalaag.gds",
         "dir::../../gds/tt_um_as1802.gds",
         "dir::../../gds/tt_um_urish_dffram.gds",
@@ -50,7 +49,9 @@
         "dir::../../gds/tt_um_TrainLED2_top.gds",
         "dir::../../gds/tt_um_moyes0_top_module.gds",
         "dir::../../gds/tt_um_vga_clock.gds",
-        "dir::../../gds/tt_um_kiwih_tt_top.gds"
+        "dir::../../gds/tt_um_kiwih_tt_top.gds",
+        "dir::../../gds/tt_um_ternaryPC_radixconvert.gds",
+        "dir::../../gds/tt_um_urish_simon.gds"
     ],
     "RUN_KLAYOUT_XOR": 0,
     "RUN_KLAYOUT_DRC": 0,

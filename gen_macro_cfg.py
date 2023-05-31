@@ -65,7 +65,7 @@ for y in range(ROWS):
         slot_height = validate_slot_height(y, x, valid_heights=[108.800, 220.320])
         if slot_height:
             pos_y = bottom_y - slot_height + 108.8
-            if x == 0: # as1802 - 8 slot wide, so put it below the others
+            if x == 0 and slot_height > 108.800: # as1802 - 8 slot wide, so put it below the others
                 pos_y -= slot_height
             macrofile.write(
                 f"tt_top1.branch\[{mux_idx}\].col_um\[{x}\].um_bot_I.block_{mux_idx}_{x}.tt_um_I  {pos_x: <7.2f} {pos_y:.2f}   N\n"
