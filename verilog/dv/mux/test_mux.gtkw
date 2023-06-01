@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Mon May 29 11:44:18 2023
+[*] Wed May 31 13:03:43 2023
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/shuttle9/tinytapeout-03p5/verilog/dv/mux/test_mux.vcd"
-[dumpfile_mtime] "Mon May 29 11:43:48 2023"
-[dumpfile_size] 354323
-[savefile] "/home/matt/work/asic-workshop/shuttle9/tinytapeout-03p5/verilog/dv/mux/mux.gtkw"
+[dumpfile_mtime] "Wed May 31 13:03:26 2023"
+[dumpfile_size] 1056612
+[savefile] "/home/matt/work/asic-workshop/shuttle9/tinytapeout-03p5/verilog/dv/mux/test_mux.gtkw"
 [timestart] 0
 [size] 2168 890
-[pos] -1 -1
-*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] 2138 245
+*-21.299999 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] test_mux_tb.
 [sst_width] 343
 [signals_width] 282
@@ -24,9 +24,6 @@ test_mux_tb.ctrl_sel_rst_n
 test_mux_tb.io_in[37:0]
 test_mux_tb.io_oeb[37:0]
 test_mux_tb.io_out[37:0]
-@28
-test_mux_tb.reset
-@22
 test_mux_tb.ui_in[7:0]
 test_mux_tb.uio_in[7:0]
 test_mux_tb.uio_oe[7:0]
