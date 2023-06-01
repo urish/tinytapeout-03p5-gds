@@ -12,3 +12,7 @@
 -v $(USER_PROJECT_VERILOG)/gl/tt_um_kiwih_tt_top.v
 -v $(USER_PROJECT_VERILOG)/gl/tt_um_ternaryPC_radixconvert.v
 -v $(USER_PROJECT_VERILOG)/gl/tt_um_urish_simon.v
+-v $(USER_PROJECT_VERILOG)/gl/tt_um_tomkeddie_a.v
+-v $(USER_PROJECT_VERILOG)/gl/tt_um_wokwi_366318576852367361.v
+-v $(USER_PROJECT_VERILOG)/gl/tt_um_loopback.v
+-v $(USER_PROJECT_VERILOG)/gl/tt_um_power_test.v

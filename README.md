@@ -36,3 +36,7 @@ For the most recent automatic build, click the tt_datasheet badge above, then do
 | 8 | Hammond Pearce | TT3p5-QTCore-A1 | HDL | https://github.com/kiwih/tt03p5-verilog-qtcoreA1 |
 | 9 | Steven bos | 4-trit balanced ternary program counter and convertor | HDL | https://github.com/aiunderstand/tt03p5-4-trit-balanced-ternary-counter-bt_signb_bt-radix-convertor |
 | 10 | Uri Shaked | Simon Says | HDL | https://github.com/urish/tt03p5-simon-game |
+| 11 | Tom Keddie | LED Panel Driver | HDL | https://github.com/TomKeddie/tinytapeout-2023-2a |
+| 12 | Alexander Shabarshin | TT03p5 ternary async test | [Wokwi](https://wokwi.com/projects/366318576852367361) | https://github.com/shaos/tt03p5-submission-shaos |
+| 13 | Sylvain Munaut | TinyTapeout 3p5 Loopback | HDL | https://github.com/TinyTapeout/tt03p5-loopback |
+| 14 | Matt Venn | TinyTapeout 3p5 Power Test | HDL | https://github.com/TinyTapeout/tt03p5-power-test |

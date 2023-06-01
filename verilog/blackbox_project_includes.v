@@ -9,3 +9,7 @@
 `include "gl/tt_um_kiwih_tt_top.v"
 `include "gl/tt_um_ternaryPC_radixconvert.v"
 `include "gl/tt_um_urish_simon.v"
+`include "gl/tt_um_tomkeddie_a.v"
+`include "gl/tt_um_wokwi_366318576852367361.v"
+`include "gl/tt_um_loopback.v"
+`include "gl/tt_um_power_test.v"

@@ -23,3 +23,7 @@
 -v $(USER_PROJECT_VERILOG)/rtl/008_tt_um_kiwih_tt_top.v
 -v $(USER_PROJECT_VERILOG)/rtl/009_c_tt-um-ternaryPC-radixconvert_singlefile.v
 -v $(USER_PROJECT_VERILOG)/rtl/010_top.v
+-v $(USER_PROJECT_VERILOG)/rtl/011_top_tto.v
+-v $(USER_PROJECT_VERILOG)/rtl/tt_um_wokwi_366318576852367361.v
+-v $(USER_PROJECT_VERILOG)/rtl/013_tt_um_loopback.v
+-v $(USER_PROJECT_VERILOG)/rtl/014_tt_um_power_test.v
