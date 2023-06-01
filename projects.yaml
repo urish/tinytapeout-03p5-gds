@@ -55,9 +55,9 @@
   status: active
   fill: false
 14:
-  url: https://github.com/TinyTapeout/tt03p5-test
+  url: https://github.com/TinyTapeout/tt03p5-power-test
   status: active
-  fill: true
+  fill: false
 15:
   url: https://github.com/TinyTapeout/tt03p5-test
   status: active

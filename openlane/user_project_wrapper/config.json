@@ -39,7 +39,8 @@
         "dir::../../lef/tt_um_urish_simon.lef",
         "dir::../../lef/tt_um_tomkeddie_a.lef",
         "dir::../../lef/tt_um_wokwi_366318576852367361.lef",
-        "dir::../../lef/tt_um_loopback.lef"
+        "dir::../../lef/tt_um_loopback.lef",
+        "dir::../../lef/tt_um_power_test.lef"
     ],
     "EXTRA_GDS_FILES": [
         "dir::../../gds/tt_ctrl.gds",
@@ -57,7 +58,8 @@
         "dir::../../gds/tt_um_urish_simon.gds",
         "dir::../../gds/tt_um_tomkeddie_a.gds",
         "dir::../../gds/tt_um_wokwi_366318576852367361.gds",
-        "dir::../../gds/tt_um_loopback.gds"
+        "dir::../../gds/tt_um_loopback.gds",
+        "dir::../../gds/tt_um_power_test.gds"
     ],
     "RUN_KLAYOUT_XOR": 0,
     "RUN_KLAYOUT_DRC": 0,
