@@ -56,7 +56,6 @@ python tt/configure.py --clone-all --fetch-gds --update-caravel
 ```
 make tt_ctrl
 make tt_mux
-make tt_um_test
 python gen_macro_cfg.py
 make user_project_wrapper
 ```
